@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/webdev')
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -18,13 +21,16 @@ app.get('/hello', (req, res) => {
 });
 
 
-
 app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });
 require('./services/movies-service')(app);
-
 require('./services/tweeter-service')(app);
 require('./services/profile-service')(app);
-app.listen(4000);
+require('./movies/service')(app);
+
+app.listen(process.env.PORT || 4000);
+
+
+
 

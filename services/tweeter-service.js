@@ -1,5 +1,19 @@
-let tweets = require('../data/tweets.json');
+let tweets = require('../json_data/tweets.json');
 
+// const dao = require('../db/tweets/tweet-dao');
+// module.exports = (app) => {
+//     const findAllTweets = (req, res) =>
+//         dao.findAllTweets()
+//             .then(tweets => res.json(tweets));
+//     const deleteTweet = (req, res) =>
+//         dao.deleteTweeet(req.params.id)
+//             .then((status) => res.send(status));
+//     const createTweet = (req, res) =>
+//         dao.createTweet(req.body)
+//             .then((insertedTweet) => res.json(insertedTweet));
+//     const updateTweet = (req, res) =>
+//         dao.updateTweet(req.params.id, req.body)
+//             .then((status) => res.send(status));
 module.exports = (app) => {
 
     const findAllTweets = (req, res) => {
@@ -61,3 +75,4 @@ module.exports = (app) => {
     app.post('/api/tweets', createTweet);
     app.get('/api/tweets', findAllTweets);
 };
+
