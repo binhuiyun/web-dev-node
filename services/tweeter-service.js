@@ -20,7 +20,7 @@ module.exports = (app) => {
         res.json(tweets);
     }
 
-    const createTweet = (req, res) => {
+    const postNewTweet = (req, res) => {
         const newTweet = {
             _id: (new Date()).getTime() + '',
             "topic": "Web Development",
@@ -37,7 +37,6 @@ module.exports = (app) => {
             },
             ...req.body,
         }
-        newTweet['_id'] = (new Date()).getTime();
         tweets = [
             newTweet,
             ...tweets
@@ -46,8 +45,13 @@ module.exports = (app) => {
     }
 
     const deleteTweet = (req, res) => {
+        console.log("********************params**********************")
+        console.log(req.params);
         const id = req.params['id'];
+        console.log("id =========================");
+        console.log(id)
         tweets = tweets.filter(tweet => tweet._id !== id);
+        console.log(tweets)
         res.sendStatus(200);
     }
 
@@ -72,7 +76,7 @@ module.exports = (app) => {
 
     app.put('/api/tweets/:id/like', likeTweet);
     app.delete('/api/tweets/:id', deleteTweet);
-    app.post('/api/tweets', createTweet);
+    app.post('/api/tweets', postNewTweet);
     app.get('/api/tweets', findAllTweets);
 };
 

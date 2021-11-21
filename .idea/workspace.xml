@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="303a9e54-3bad-42a1-a5f4-d7cea60c403e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/profile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/tweets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/_mdb_catalog.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/collection-4-1616120221057646781.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/collection-4-1616120221057646781.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.2021-11-18T07-04-51Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.2021-11-18T07-04-51Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.interim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/index-5-1616120221057646781.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/index-5-1616120221057646781.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/index-6-1616120221057646781.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/index-6-1616120221057646781.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/journal/WiredTigerLog.0000000001" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/journal/WiredTigerLog.0000000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/db/sizeStorer.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/profile-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/profile-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/tweeter-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/tweeter-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="20cr585PhGhXObUKGq9bMPv2D6z" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -47,6 +60,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
+  <component name="RunManager">
+    <configuration name="a8" type="NodeJSConfigurationType" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +75,8 @@
       <updated>1636354531070</updated>
       <workItem from="1636354532742" duration="4304000" />
       <workItem from="1637217117498" duration="15816000" />
-      <workItem from="1637298248326" duration="7415000" />
+      <workItem from="1637298248326" duration="24630000" />
+      <workItem from="1637517433401" duration="948000" />
     </task>
     <servers />
   </component>
@@ -75,5 +94,21 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/services/tweeter-service.js</url>
+          <line>49</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/services/tweeter-service.js</url>
+          <line>39</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -16,9 +16,6 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Credentials", "true");
     next();
 });
-app.get('/hello', (req, res) => {
-    res.send('Hello World!');
-});
 
 
 app.get('/hello', (req, res) => {
