@@ -1,9 +1,9 @@
 const model = require('./profile-model');
 
-const findAllProfile = () => model.find();
+const findProfileById = (id) => model.findOne({_id: id});
 const updateProfile = (id, profile) => model.updateOne({_id: id},
     {$set: profile});
 
 module.exports = {
-    findAllProfile,updateProfile
+    findProfileById,updateProfile
 };

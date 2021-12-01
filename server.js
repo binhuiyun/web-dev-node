@@ -22,9 +22,10 @@ app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });
 require('./services/movies-service')(app);
-require('./services/tweeter-service')(app);
-require('./services/profile-service')(app);
+require('./services/tweet-service-db')(app);
+require('./services/profile-service-db')(app);
 require('./movies/service')(app);
+require('./services/who-service')(app);
 
 app.listen(process.env.PORT || 4000);
 

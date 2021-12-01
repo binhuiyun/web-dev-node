@@ -10,7 +10,7 @@ const schema = mongoose.Schema({
     dateOfBirth: {type: Date, defaultValue: Date.now},
     dateJoined: String,
     followingCount: {type: Number, defaultValue: 0},
-    followersCount: {type: Number, defaultValue: 0},
+    followersCount: {type: Number, defaultValue: 0}},
     {collection: "profiles"})
 
 module.exports = schema;

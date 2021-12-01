@@ -1,42 +1,10 @@
 let tweets = require('../json_data/tweets.json');
-
-// const dao = require('../db/tweets/tweet-dao');
-// module.exports = (app) => {
-//     const findAllTweets = (req, res) =>
-//         dao.findAllTweets()
-//             .then(tweets => res.json(tweets));
-//     const deleteTweet = (req, res) =>
-//         dao.deleteTweeet(req.params.id)
-//             .then((status) => res.send(status));
-//     const createTweet = (req, res) =>
-//         dao.createTweet(req.body)
-//             .then((insertedTweet) => res.json(insertedTweet));
-//     const updateTweet = (req, res) =>
-//         dao.updateTweet(req.params.id, req.body)
-//             .then((status) => res.send(status));
 module.exports = (app) => {
-
     const findAllTweets = (req, res) => {
         res.json(tweets);
     }
-
     const postNewTweet = (req, res) => {
-        const newTweet = {
-            _id: (new Date()).getTime() + '',
-            "topic": "Web Development",
-            "userName": "ReactJS",
-            "verified": false,
-            "handle": "ReactJS",
-            "time": "2h",
-            "avatar-image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
-            "logo-image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
-            "stats": {
-                "comments": 123,
-                "retweets": 234,
-                "likes": 345
-            },
-            ...req.body,
-        }
+        const newTweet = req.body;
         tweets = [
             newTweet,
             ...tweets
@@ -45,11 +13,7 @@ module.exports = (app) => {
     }
 
     const deleteTweet = (req, res) => {
-        console.log("********************params**********************")
-        console.log(req.params);
         const id = req.params['id'];
-        console.log("id =========================");
-        console.log(id)
         tweets = tweets.filter(tweet => tweet._id !== id);
         console.log(tweets)
         res.sendStatus(200);
